@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { model, Schema } from "mongoose";
 
 export default model(
   "Contact",
@@ -26,5 +26,5 @@ export default model(
         message: (props) => `${props.value} is not a valid URL!`,
       },
     },
-  })
+  },{"strict" : "throw"})
 );
